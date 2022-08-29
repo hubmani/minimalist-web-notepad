@@ -5,7 +5,7 @@ ENV APP_PATH /var/www/minimalist-web-notepad
 # Set Apache DocumentRoot to APP_PATH
 RUN sed -ri -e 's!/var/www/html!${APP_PATH}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APP_PATH}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
-
+RUN sed -i '$a\ServerName localhost:80' file.txt
 # Set PHP configuration to production
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 
