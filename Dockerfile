@@ -4,6 +4,7 @@ FROM php:7.4-apache
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 RUN sed -i '$a\ServerName localhost:80' /etc/apache2/apache2.conf
 
+
 # Enable rewrite
 RUN a2enmod rewrite
 
