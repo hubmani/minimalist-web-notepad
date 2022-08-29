@@ -6,8 +6,3 @@ services:
     restart: always
     ports:
      - "80:80"
-    volumes:
-     - minimalist-web-notepad:/var/www/minimalist-web-notepad/_tmp
-
-volumes:
-  minimalist-web-notepad:
