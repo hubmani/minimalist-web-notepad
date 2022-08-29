@@ -22,8 +22,5 @@ RUN sed -ri -e 's!https://notes.orga.cat!!g' $APP_PATH/index.php
 # Set access rights for Apache
 RUN chown -R www-data:www-data $APP_PATH/_tmp
 
-# Create volumes
-VOLUME $APP_PATH/_tmp
-
 # Expose port 80
 EXPOSE 80
